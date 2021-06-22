@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        int account_kopecks = 100_00; //начальная сумма на счете в копейках
+        int deposit_kopecks = 2000_00; //сумма пополнения в копейках
+        int bonus_kopecks = deposit_kopecks / 100_00; //сумма бонуса в зависимости от суммы пополнения
+
+        if (deposit_kopecks > 1000){
+           int amount1 = account_kopecks + deposit_kopecks + bonus_kopecks;
+           System.out.println("Бонус " +bonus_kopecks);
+           System.out.println("Сумма на счете " +amount1);
+           //если сумма пополнения больше 1000 рублей, рассчитывается бонус и суммируется
+            // с депозитом и деньгами на счете
+        } else {
+           int amount2 = account_kopecks + deposit_kopecks;
+            System.out.println("Бонус 0");
+            System.out.println("Сумма на счете " +amount2);
+            //если сумма пополнения 1000 рублей и меньше, бонус не рассчитывается
+        }
+    }
+}
